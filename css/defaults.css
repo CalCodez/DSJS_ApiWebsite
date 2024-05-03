@@ -1,3 +1,50 @@
-.defult {
-  color: red;
+:root {
+  --white: #e1e1e1;
+  --poke-red: #ff0000;
+  --poek-darkRed: #cc0000;
+  --poke-blue: #0000a0;
+  --poke-darkBlue: #020253;
+  --poke-lightBlue: #2a75bb;
+  --pickachu: #ffcb05;
+  --yellow-shadow: #c7a008;
+  --yellow-transparent: #c7a10895;
+  --poke-darkGray: #444444;
+  --platinum: #999999;
+  --poke-silver: #c0c0c0;
+
+  /* EXTRA COLORS */
+  --alpah-sapphire: #1768d1;
+  --crystal: #4fd9ff;
+  --colloseum: #b6cae4;
+
+}
+
+.font-container {
+
+  font-family: 'Pokemon Solid', sans-serif;
+  font-family: 'Fight Side', sans-serif;
+  font-family: 'Activity Saturday', sans-serif;
+
+
+}
+
+body {
+  display: flex;
+  place-content: center;
+  background-image: url('https://cdn.creazilla.com/illustrations/1668489/space-pokemon-go-virtual-illustration-md.jpeg');
+  object-fit: cover;
+  z-index: -1;
+}
+
+.body-content-wrapper {
+  display: flex;
+  place-content: center;
+  background-color: var(--yellow-transparent);
+  height: 500px;
+  width: 95%;
+}
+
+a,
+li {
+  text-decoration: none;
 }

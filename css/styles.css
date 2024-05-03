@@ -1,3 +1,40 @@
-.styles {
-  color: yellow;
+/* ++NavBar */
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  object-fit: contain;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--pickachu);
+  height: 80px;
+}
+
+.navbar-image {
+  height: 100%;
+  width: 250px;
+}
+
+.navbar-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 250px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: var(--black);
+  font-size: 30px;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 3px;
+
 }
