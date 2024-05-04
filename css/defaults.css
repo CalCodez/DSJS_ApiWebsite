@@ -53,26 +53,35 @@ li {
 }
 
 .btn {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
   background-color: var(--poke-blue);
   color: var(--pickachu);
   height: 35px;
   width: 100px;
   border-radius: 20px;
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+
   margin-bottom: 10px;
+  border-left-color: 3px solid var(--pickachu);
+  border-top-color: 3px solid var(--pickachu);
 
 }
 
-.add-fav-btn {
+.btn img {
+  width: 30px;
+  height: 30px;
+}
+
+
+.add-fav-btn,
+.view-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 9px;
   font-size: 10px;
-}
-
-.add-fav-btn img {
-  width: 30px;
-  height: 30px;
+  border-left-color: 3px solid var(--pickachu);
+  border-top-color: 3px solid var(--pickachu);
 }
