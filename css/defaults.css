@@ -1,7 +1,7 @@
 :root {
   --white: #e1e1e1;
   --poke-red: #ff0000;
-  --poek-darkRed: #cc0000;
+  --poke-darkRed: #cc0000;
   --poke-blue: #0000a0;
   --poke-darkBlue: #020253;
   --poke-lightBlue: #2a75bb;
@@ -38,13 +38,41 @@ body {
 
 .body-content-wrapper {
   display: flex;
-  place-content: center;
+  flex-direction: column;
   background-color: var(--yellow-transparent);
-  height: 500px;
-  width: 95%;
+  height: auto;
+  width: 90%;
+  min-width: 375px;
+
+
 }
 
 a,
 li {
   text-decoration: none;
+}
+
+.btn {
+  background-color: var(--poke-blue);
+  color: var(--pickachu);
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.add-fav-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+}
+
+.add-fav-btn img {
+  width: 30px;
+  height: 30px;
 }

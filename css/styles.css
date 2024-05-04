@@ -9,6 +9,7 @@
   width: 100%;
   border: 1px solid var(--pickachu);
   height: 80px;
+  margin-bottom: 50px;
 }
 
 .navbar-image {
@@ -36,5 +37,71 @@ nav a {
   font-size: 30px;
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 3px;
+
+}
+
+/* ~~ Card Setion */
+
+.card-section {
+  display: flex;
+  place-content: center;
+}
+
+.card-grid-container {
+  display: flex;
+  place-content: center;
+}
+
+table {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  border: 15px inset var(--poke-darkRed);
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+
+}
+
+
+
+td {
+  border: 4px ridge var(--poke-blue);
+  max-width: 250px;
+  min-width: 200px;
+  height: 250px;
+
+}
+
+.td-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  align-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.td-img-container {
+  display: flex;
+  border: 2px solid white;
+  width: 80%;
+  height: 50%;
+  margin-bottom: 30px;
+
+
+}
+
+.td-img-container img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.td-button-container {
+  display: felx;
+  flex-direction: column;
+  align-items: center;
 
 }
