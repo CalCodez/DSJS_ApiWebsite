@@ -38,10 +38,11 @@ body {
 
 .body-content-wrapper {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   flex-direction: column;
-  background-color: var(--yellow-transparent);
   height: auto;
-  width: 90%;
+  width: 100%;
   min-width: 375px;
 
 
@@ -52,36 +53,35 @@ li {
   text-decoration: none;
 }
 
-.btn {
+.button-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 200px;
+  height: auto;
+  border: 2px solid red;
+
+}
+
+.btn {
+  display: flex;
   place-content: center;
   background-color: var(--poke-blue);
   color: var(--pickachu);
   height: 35px;
-  width: 100px;
+  width: 90px;
   border-radius: 20px;
   padding: 20px;
-
   margin-bottom: 10px;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
   border-left-color: 3px solid var(--pickachu);
   border-top-color: 3px solid var(--pickachu);
 
 }
 
 .btn img {
-  width: 30px;
-  height: 30px;
-}
-
-
-.add-fav-btn,
-.view-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 9px;
-  font-size: 10px;
-  border-left-color: 3px solid var(--pickachu);
-  border-top-color: 3px solid var(--pickachu);
+  width: 20px;
+  height: 20px;
 }
