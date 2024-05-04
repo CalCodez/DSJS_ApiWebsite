@@ -4,6 +4,7 @@
   --poke-darkRed: #cc0000;
   --poke-blue: #0000a0;
   --poke-darkBlue: #020253;
+  --poke-darkBlue-transparent: #020253c2;
   --poke-lightBlue: #2a75bb;
   --pickachu: #ffcb05;
   --yellow-border: #f5c525;
@@ -84,4 +85,23 @@ li {
 .btn img {
   width: 20px;
   height: 20px;
+}
+
+.button-container a {
+  display: flex;
+  place-content: center;
+  background-color: var(--poke-blue);
+  color: var(--pickachu);
+  height: 6px;
+  width: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px 0;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  border-left-color: 3px solid var(--pickachu);
+  border-top-color: 3px solid var(--pickachu);
+  box-shadow: 1px 1px 1px 1px var(--poke-darkBlue);
+
 }

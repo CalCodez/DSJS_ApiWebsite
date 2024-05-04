@@ -3,15 +3,17 @@
 .navbar-container {
   display: flex;
   flex-direction: row;
-  flex-shrink: 1;
+
   justify-content: space-between;
   object-fit: contain;
   align-items: center;
   place-self: center;
   border: 1px solid var(--pickachu);
-  height: 80px;
+  height: 150px;
   margin-bottom: 50px;
-  max-width: 1360px;
+  min-width: 375px;
+  width: 90vmax;
+  flex-wrap: wrap;
 }
 
 .navbar-image {
@@ -124,6 +126,80 @@ nav a {
 .inner-stat-container {
   color: var(--black);
   font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 0.5;
+  font-family: 'Times New Roman', Times, serif
+}
+
+
+/* ^^Favorites Page Styles */
+
+.fav-card-section {
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  width: 95%;
+}
+
+.fav-card-container {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  justify-content: flex-start;
+  place-self: center;
+  align-content: space-between;
+  background-color: var(--poke-darkBlue-transparent);
+  height: auto;
+  width: fit-content;
+  border: 6px groove var(--poke-red);
+  padding: 5px;
+  gap: 50px;
+}
+
+
+.card-stats-container {
+
+  margin-top: 15px;
+}
+
+.fav-card-container>.img-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 5px inset var(--yellow-border);
+  margin: 0 0 20px 0;
+
+}
+
+
+
+
+
+
+.fav-name-tag {
+  text-align: center;
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 15px;
+  color: var(--pickachu);
+  letter-spacing: 4.5px;
+  place-self: center;
+  width: 100%;
+  margin-top: -8px;
+}
+
+.fav-card-container>.inner-stat-container {
+  width: 100%;
+  height: auto;
+}
+
+.fav-card-container p {
+  color: var(--pickachu);
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.5px;
   line-height: 0.5;
