@@ -3,13 +3,15 @@
 .navbar-container {
   display: flex;
   flex-direction: row;
+  flex-shrink: 1;
   justify-content: space-between;
   object-fit: contain;
   align-items: center;
-  width: 100%;
+  place-self: center;
   border: 1px solid var(--pickachu);
   height: 80px;
   margin-bottom: 50px;
+  max-width: 1360px;
 }
 
 .navbar-image {
@@ -33,7 +35,7 @@ nav {
 }
 
 nav a {
-  color: var(--black);
+  color: var(--pickachu);
   font-size: 30px;
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 3px;
@@ -41,12 +43,17 @@ nav a {
 }
 
 /* ~~ Card Setion */
-
 .card-section {
   display: flex;
+  flex-direction: row;
   place-content: center;
+  place-self: center;
+  flex-wrap: wrap;
   height: auto;
-  max-width: 90%;
+  max-width: 1360px;
+  outline: 2px solid white;
+
+  gap: 20px;
 }
 
 
@@ -58,8 +65,9 @@ nav a {
   align-content: space-between;
   background-color: var(--yellow-transparent);
   height: auto;
-  width: 200px;
-  border: 6px groove red;
+  width: 220px;
+  border: 6px groove var(--yellow-border);
+  padding: 5px;
 }
 
 
@@ -68,16 +76,28 @@ nav a {
   flex-direction: column;
   place-content: center;
   align-items: center;
+  border: ridge 3px var(--poke-red);
+  width: 215px;
+}
+
+
+.card-stats-container {
+
+  margin-top: 15px;
 }
 
 .img-container {
   display: flex;
+  flex-direction: column;
   border: 2px solid white;
-  width: 90px;
-  height: 90px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
   margin-bottom: 30px;
-  border: 2px inset var(--poke-blue);
+  border: 5px inset var(--poke-blue);
 }
+
+
 
 .img-container img {
   object-fit: cover;
@@ -85,8 +105,27 @@ nav a {
   width: 100%;
 }
 
-.card-stats-container {
+
+.name-tag {
+  margin-top: -25px;
+  text-align: center;
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 30px;
+  color: var(--pickachu);
+  letter-spacing: 4.5px;
+  place-self: center;
+}
+
+.inner-stat-container {
   width: 100%;
   height: auto;
-  border: 2px outset var(--poke-blue);
+}
+
+.inner-stat-container {
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 0.5;
+  font-family: 'Times New Roman', Times, serif
 }

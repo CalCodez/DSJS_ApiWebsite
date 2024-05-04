@@ -6,6 +6,7 @@
   --poke-darkBlue: #020253;
   --poke-lightBlue: #2a75bb;
   --pickachu: #ffcb05;
+  --yellow-border: #f5c525;
   --yellow-shadow: #c7a008;
   --yellow-transparent: #c7a10895;
   --poke-darkGray: #444444;
@@ -59,7 +60,6 @@ li {
   justify-content: space-around;
   width: 200px;
   height: auto;
-  border: 2px solid red;
 
 }
 
@@ -72,7 +72,7 @@ li {
   width: 90px;
   border-radius: 20px;
   padding: 20px;
-  margin-bottom: 10px;
+  margin: 5px 0;
   align-items: center;
   gap: 9px;
   font-size: 10px;
