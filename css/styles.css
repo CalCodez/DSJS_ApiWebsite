@@ -8,7 +8,6 @@
   object-fit: contain;
   align-items: center;
   place-self: center;
-  border: 1px solid var(--pickachu);
   height: 150px;
   margin-bottom: 50px;
   min-width: 375px;
@@ -53,10 +52,10 @@ nav a {
   flex-wrap: wrap;
   height: auto;
   max-width: 1360px;
-  outline: 2px solid white;
-
   gap: 20px;
 }
+
+
 
 
 .card-container {
@@ -65,13 +64,17 @@ nav a {
   place-items: center;
   justify-content: center;
   align-content: space-between;
-  background-color: var(--yellow-transparent);
+  background-color: var(--poke-darkBlue-transparent);
   height: auto;
   width: 220px;
   border: 6px groove var(--yellow-border);
   padding: 5px;
 }
 
+.card-container:hover {
+
+  background-color: var(--poke-lightBlue);
+}
 
 .inner-card-container {
   display: flex;
@@ -81,6 +84,8 @@ nav a {
   border: ridge 3px var(--poke-red);
   width: 215px;
 }
+
+
 
 
 .card-stats-container {
@@ -124,7 +129,7 @@ nav a {
 }
 
 .inner-stat-container {
-  color: var(--black);
+  color: var(--poke-red);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -140,6 +145,7 @@ nav a {
   flex-direction: column;
   place-self: center;
   width: 95%;
+  gap: 50px;
 }
 
 .fav-card-container {
@@ -155,6 +161,10 @@ nav a {
   border: 6px groove var(--poke-red);
   padding: 5px;
   gap: 50px;
+}
+
+.fav-card-container:hover {
+  background-color: var(--poke-lightBlue);
 }
 
 
