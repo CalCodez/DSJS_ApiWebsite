@@ -1,0 +1,24 @@
+{
+	"files": [
+		{
+			"path": "index.html",
+			"bookmarks": [
+				{
+					"line": 30,
+					"column": 15,
+					"label": "NavBar"
+				},
+				{
+					"line": 42,
+					"column": 41,
+					"label": "Main "
+				},
+				{
+					"line": 153,
+					"column": 9,
+					"label": "Favorites"
+				}
+			]
+		}
+	]
+}

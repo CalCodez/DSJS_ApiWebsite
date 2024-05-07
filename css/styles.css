@@ -55,9 +55,6 @@ nav a {
   gap: 20px;
 }
 
-
-
-
 .card-container {
   display: flex;
   flex-direction: column;
@@ -68,42 +65,28 @@ nav a {
   height: auto;
   width: 220px;
   border: 6px groove var(--yellow-border);
-  padding: 5px;
+  padding: 10px;
 }
 
 .card-container:hover {
-
-  background-color: var(--poke-lightBlue);
+  background-color: var(--poke-darkBlue);
 }
-
-.inner-card-container {
-  display: flex;
-  flex-direction: column;
-  place-content: center;
-  align-items: center;
-  border: ridge 3px var(--poke-red);
-  width: 215px;
-}
-
 
 
 
 .card-stats-container {
-
   margin-top: 15px;
 }
+
 
 .img-container {
   display: flex;
   flex-direction: column;
-  border: 2px solid white;
   width: 200px;
   height: 150px;
   margin-top: 10px;
-  margin-bottom: 30px;
-  border: 5px inset var(--poke-blue);
+  border: 5px inset var(--poke-red);
 }
-
 
 
 .img-container img {
@@ -112,106 +95,72 @@ nav a {
   width: 100%;
 }
 
-
-.name-tag {
-  margin-top: -25px;
+.name-tag,
+h4 {
   text-align: center;
   font-family: 'Pokemon Solid', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--pickachu);
   letter-spacing: 4.5px;
   place-self: center;
+  margin: -5px 0 -10px 0;
 }
 
-.inner-stat-container {
-  width: 100%;
-  height: auto;
-}
 
 .inner-stat-container {
   color: var(--poke-red);
-  font-size: 10px;
+  font-size: 12px;
+  text-align: start;
   font-weight: 600;
   letter-spacing: 1.5px;
   line-height: 0.5;
-  font-family: 'Times New Roman', Times, serif
+  font-family: 'Times New Roman', Times, serif;
+  height: auto;
 }
 
 
 /* ^^Favorites Page Styles */
-
-.fav-card-section {
+.favorties-section {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1360px;
+  gap: 20px;
   place-self: center;
-  width: 95%;
-  gap: 50px;
 }
 
-.fav-card-container {
+
+.sort-count-container {
   display: flex;
   flex-direction: row;
-  place-items: center;
-  justify-content: flex-start;
-  place-self: center;
-  align-content: space-between;
-  background-color: var(--poke-darkBlue-transparent);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   height: auto;
-  width: fit-content;
-  border: 6px groove var(--poke-red);
-  padding: 5px;
-  gap: 50px;
 }
 
-.fav-card-container:hover {
-  background-color: var(--poke-lightBlue);
-}
+/* !!Need to center align the sort container counter */
 
-
-.card-stats-container {
-
-  margin-top: 15px;
-}
-
-.fav-card-container>.img-container {
+.sort-count-container>h5 {
   display: flex;
-  flex-direction: column;
-  border: 2px solid white;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 5px inset var(--yellow-border);
-  margin: 0 0 20px 0;
-
-}
-
-
-
-
-
-
-.fav-name-tag {
-  text-align: center;
   font-family: 'Pokemon Solid', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: var(--pickachu);
   letter-spacing: 4.5px;
+
+}
+
+
+
+/* ``The container that hold the cards moved toe "favorites" */
+
+.favorites-container {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
   place-self: center;
-  width: 100%;
-  margin-top: -8px;
-}
-
-.fav-card-container>.inner-stat-container {
-  width: 100%;
+  flex-wrap: wrap;
   height: auto;
-}
+  width: 100%;
+  gap: 20px;
 
-.fav-card-container p {
-  color: var(--pickachu);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  line-height: 0.5;
-  font-family: 'Times New Roman', Times, serif
 }
