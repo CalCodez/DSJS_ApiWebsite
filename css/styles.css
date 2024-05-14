@@ -3,14 +3,11 @@
 .navbar-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  object-fit: contain;
+  justify-content: space-around;
   align-items: center;
   place-self: center;
   height: 150px;
-  margin-bottom: 50px;
-  min-width: 375px;
-  width: 90vmax;
+  width: 70vw;
   flex-wrap: wrap;
 }
 
@@ -50,7 +47,8 @@ nav a {
   place-self: center;
   flex-wrap: wrap;
   height: auto;
-  max-width: 1360px;
+  max-width: 80vw;
+
   gap: 20px;
 }
 
@@ -62,29 +60,31 @@ nav a {
   align-content: space-between;
   background-color: var(--poke-darkBlue-transparent);
   height: auto;
-  width: 220px;
-  border: 6px groove var(--yellow-border);
-  padding: 10px;
+  width: 80px;
+  border: 4px groove var(--yellow-border);
 }
 
-.card-container:hover {
+.card-container:hover,
+.modal-card-container:hover {
   background-color: var(--poke-darkBlue);
 }
 
+/** {
+  outline: 1px dotted red;
 
-
-.card-stats-container {
-  margin-top: 15px;
 }
+
+*/
+
 
 
 .img-container {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  border: 5px inset var(--poke-red);
+  width: 50px;
+  height: 50px;
+  margin-top: 2.5px;
+  border: 1px inset var(--poke-red);
 }
 
 
@@ -97,37 +97,110 @@ nav a {
 .name-tag,
 h4 {
   text-align: center;
-  font-family: 'Pokemon Solid', sans-serif;
-  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
   color: var(--pickachu);
-  letter-spacing: 4.5px;
   place-self: center;
-  margin: -5px 0 -10px 0;
+  margin: 0px 0 -1px 0;
 }
 
 
 .inner-stat-container {
   color: var(--poke-red);
-  font-size: 12px;
+  font-size: 5.5px;
   text-align: start;
-  font-weight: 600;
+  font-weight: 200;
   letter-spacing: 1.5px;
-  line-height: 0.5;
+  line-height: 0.1;
   font-family: 'Times New Roman', Times, serif;
   height: auto;
 }
 
 
-/* ^^Favorites Page Styles */
-.favorties-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-width: 1360px;
-  gap: 20px;
+
+
+
+/* ~~Modal Styles */
+.page-block {
+  background: var(--black);
+  width: 80vw;
+  height: 80vh;
+  border: 20px ridge var(--yellow-border);
+  position: relative;
+  padding: 2rem;
+  overflow-y: scroll;
+  scroll-behavior: auto;
   place-self: center;
+  place-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.35s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  padding: 1rem;
 }
 
+.full-site-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.35s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  padding: 1rem;
+
+}
+
+.modal-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  place-self: center;
+  font-family: 'Pokemon Solid', sans-serif;
+  margin-top: -35px;
+  margin-bottom: 10px;
+  border-bottom: 5px ridge var(--poke-red);
+}
+
+
+
+/*.modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}*/
+
+.modal-header-container h2 {
+  display: block;
+  Font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 0.5;
+  font-family: 'Fight Side', sans-serif;
+  color: var(--pickachu);
+  height: fit-content;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+.modal-header-container>a {
+  font-family: 'Fight Side', sans-serif;
+  color: var(--pickachu);
+  font-size: 50px;
+  letter-spacing: 3px;
+  line-height: 1;
+
+}
 
 .sort-count-container {
   display: flex;
@@ -135,87 +208,140 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   height: auto;
+  margin: -10px 0 20px 0;
+  line-height: 0;
+  padding-top: 0;
 }
 
-/* !!Need to center align the sort container counter */
+
 
 .sort-count-container>h5 {
+  display: block;
   display: flex;
   font-family: 'Pokemon Solid', sans-serif;
   font-size: 20px;
   color: var(--pickachu);
   letter-spacing: 4.5px;
-
+  ;
 }
 
-
-
-/* ``The container that hold the cards moved toe "favorites" */
-
-.favorties-section {
+.fav-container-wrapper {
   display: flex;
-  flex-direction: column;
-
+  place-content: center;
+  width: 100%;
+  height: auto;
 }
 
-.favorites-container {
+#fav-section {
   display: flex;
   flex-direction: row;
   place-content: center;
-  place-self: center;
   flex-wrap: wrap;
-  height: auto;
-  width: 100%;
+  height: 70%;
+  width: 90%;
   gap: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-top: 10px groove var(--poke-red);
+  border-left: 10px groove var(--poke-blue);
+  border-right: 10px groove var(--poke-blue);
+  border-bottom: 10px groove var(--poke-red);
 }
 
-.fav-image-container {
+
+
+/* ++Modal Bottom Imgae Container */
+
+.modal-bottom-img-container {
   display: flex;
   flex-direction: row;
+  justify-self: center;
+  width: 80%;
   height: auto;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  outline: 2px solid white;
+  left: 100px;
 }
 
 
-.fav-img-left {
-  width: 150px;
-  height: 150px;
+.modal-img-left {
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
 
 }
 
-.fav-img-left img {
+.modal-img-left img {
   object-fit: cover;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 
 }
 
-.fav-img-right {
-  width: 150px;
-  height: 150px;
+.modal-img-right {
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.fav-img-right img {
+.modal-img-right img {
   object-fit: cover;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 
 }
 
-.fav-logo-img {
+.modal-img-middle {
   height: 100%;
-  width: 250px;
+  width: 150px;
+  object-fit: cover;
 }
 
-.fav-logo-img img {
+.modal-img-middle img {
   object-fit: cover;
   height: 100%;
-  width: 250px;
+  width: 150px;
+}
+
+
+
+
+
+.full-site-modal.is-visible,
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+*/ [data-anamation="zoomInOUt"].full-site-modal {
+  transform: scale(0.2);
+}
+
+/*[data-animation="slideInOutTop"] .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+[data-animation="slideInOutTop"].is-visible .modal-dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+
+}
+
+[data-animation="slideInOutTop"] .modal-dialog {
+  transform: translateY(-100%);
+}*/
+
+[data-anamation="zoomInOUt"].full-site-modal.full-site-modal.is-visible,
+[data-animation="slideInOutTop"].is-visible .modal-dialog {
+  transform: none;
 }

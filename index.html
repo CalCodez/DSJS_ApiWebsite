@@ -11,18 +11,19 @@
                   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
                   crossorigin="anonymous"
                   referrerpolicy="no-referrer" />
-            <link rel="stylesheet"
-                  href="./css/defaults.css">
-            <link rel="stylesheet"
-                  href="./css/styles.css">
-            <link rel="stylesheet"
-                  href="./css/responsive.css">
             <link href="https://fonts.cdnfonts.com/css/pokemon-solid"
                   rel="stylesheet">
             <link href="https://fonts.cdnfonts.com/css/fight-side"
                   rel="stylesheet">
             <link href="https://fonts.cdnfonts.com/css/activity-saturday"
                   rel="stylesheet">
+            <link rel="stylesheet"
+                  href="./css/defaults.css">
+            <link rel="stylesheet"
+                  href="./css/styles.css">
+            <link rel="stylesheet"
+                  href="./css/responsive.css">
+
 
       </head>
 
@@ -35,263 +36,68 @@
                                    alt="pokemon-logo">
                         </div>
                         <nav>
-                              <a href="./index.html"> Home
-                              </a><a href="#fav-section">Favorites</a>
+                              <a data-open="favorite">FAVORITES</a>
                         </nav>
                   </div>
 
-                  <section class="card-section">
-                        <div class="card-container">
-                              <div class="img-container">
-                                    <img src="./images/picka_imgae_1.jpg"
-                                         alt="pickachu">
-                              </div>
-                              <h6 class="name-tag">Pickachu</h6>
-                              <hr class="card-hr">
-                              <div class="card-stats-container">
-                                    <div class="inner-stat-container">
-                                          <p>HITS: Something</p>
-                                          <p>STRIKES: Something</p>
-                                          <p>POWER: Something</p>
-                                    </div>
-                              </div>
-                              <div class="button-container">
-                                    <button class="add-fav-btn btn">
-                                          <img src="./images/pokeball_closed.png"
-                                               alt="pokeball-closed">
-                                          Add To Favorites</button>
-                              </div>
-                        </div>
-                        <div class="card-container">
-                              <div class="img-container">
-                                    <img src="./images/picka_imgae_1.jpg"
-                                         alt="pickachu">
-                              </div>
-                              <h6 class="name-tag">Pickachu</h6>
-                              <hr class="card-hr">
-                              <div class="card-stats-container">
-                                    <div class="inner-stat-container">
-                                          <p>HITS: Something</p>
-                                          <p>STRIKES: Something</p>
-                                          <p>POWER: Something</p>
-                                    </div>
-                              </div>
-                              <div class="button-container">
-                                    <button class="add-fav-btn btn">
-                                          <img src="./images/pokeball_closed.png"
-                                               alt="pokeball-closed">
-                                          Add To Favorites</button>
-                              </div>
-                        </div>
-                        <div class="card-container">
-                              <div class="img-container">
-                                    <img src="./images/picka_imgae_1.jpg"
-                                         alt="pickachu">
-                              </div>
-                              <h6 class="name-tag">Pickachu</h6>
-                              <hr class="card-hr">
-                              <div class="card-stats-container">
-                                    <div class="inner-stat-container">
-                                          <p>HITS: Something</p>
-                                          <p>STRIKES: Something</p>
-                                          <p>POWER: Something</p>
-                                    </div>
-                              </div>
-                              <div class="button-container">
-                                    <button class="add-fav-btn btn">
-                                          <img src="./images/pokeball_closed.png"
-                                               alt="pokeball-closed">
-                                          Add To Favorites</button>
-                              </div>
-                        </div>
-                        <div class="card-container">
-                              <div class="img-container">
-                                    <img src="./images/picka_imgae_1.jpg"
-                                         alt="pickachu">
-                              </div>
-                              <h6 class="name-tag">Pickachu</h6>
-                              <hr class="card-hr">
-                              <div class="card-stats-container">
-                                    <div class="inner-stat-container">
-                                          <p>HITS: Something</p>
-                                          <p>STRIKES: Something</p>
-                                          <p>POWER: Something</p>
-                                    </div>
-                              </div>
-                              <div class="button-container">
-                                    <button class="add-fav-btn btn">
-                                          <img src="./images/pokeball_closed.png"
-                                               alt="pokeball-closed">
-                                          Add To Favorites</button>
-                              </div>
-                        </div>
-                        <div class="card-container">
-                              <div class="img-container">
-                                    <img src="./images/picka_imgae_1.jpg"
-                                         alt="pickachu">
-                              </div>
-                              <h6 class="name-tag">Pickachu</h6>
-                              <hr class="card-hr">
-                              <div class="card-stats-container">
-                                    <div class="inner-stat-container">
-                                          <p>HITS: Something</p>
-                                          <p>STRIKES: Something</p>
-                                          <p>POWER: Something</p>
-                                    </div>
-                              </div>
-                              <div class="button-container">
-                                    <button class="add-fav-btn btn">
-                                          <img src="./images/pokeball_closed.png"
-                                               alt="pokeball-closed">
-                                          Add To Favorites</button>
-                              </div>
-                        </div>
+                  <section class="card-section"
+                           id="main-card-section">
+
                   </section>
 
-                  <h2>FAVORITES</h2>
 
-                  <section class="favorties-section">
+
+                  <!-- !!Favorite MODAL -->
+                  <div class="full-site-modal page-block"
+                       id="favorite"
+                       data-animation="zoomInOut"
+                       data-close="#">
+                        <div class="modal-header-container">
+                              <h2>Favorites</h2>
+                              <a href="./index.html">Home</a>
+                        </div>
                         <div class="sort-count-container">
                               <div class="sort-container">
-                                    <div class="btn">Sort A-Z</div>
-                                    <div class="btn">Sort Z-A</div>
+                                    <button class="btn sort-btn"
+                                            id="sortBTN-asc"
+                                            data-sortdir="asc">Sort A-Z</button>
+                                    <button class="btn sort-btn"
+                                            id="sortBTN-desc"
+                                            data-sortdir="desc">Sort Z-A</button>
                               </div>
-                              <h5 class="counter-text">Colletion__/30</h5>
+                              <h5 class="counter-text"></h5>
                         </div>
+                        <div class="fav-container-wrapper">
+                              <div class="favorites-container modal-body"
+                                   id="fav-section"
+                                   dataset="fav-section">
 
-                        <hr class="sort-count-hr">
-                        <div class="favorites-container"
-                             id="fav-section">
-                              <div class="card-container">
-                                    <div class="img-container">
-                                          <img src="./images/picka_imgae_1.jpg"
-                                               alt="pickachu">
-                                    </div>
-                                    <h6 class="name-tag">Pickachu</h6>
-                                    <hr class="card-hr">
-                                    <div class="card-stats-container">
-                                          <div class="inner-stat-container">
-                                                <p>HITS: Something</p>
-                                                <p>STRIKES: Something</p>
-                                                <p>POWER: Something</p>
-                                          </div>
-                                    </div>
-                                    <div class="button-container">
-                                          <button class="add-fav-btn btn">
-                                                <img src="./images/pokeball_closed.png"
-                                                     alt="pokeball-closed">
-                                                Add To Favorites</button>
-                                    </div>
+
                               </div>
-                              <div class="card-container">
-                                    <div class="img-container">
-                                          <img src="./images/picka_imgae_1.jpg"
-                                               alt="pickachu">
-                                    </div>
-                                    <h6 class="name-tag">Pickachu</h6>
-                                    <hr class="card-hr">
-                                    <div class="card-stats-container">
-                                          <div class="inner-stat-container">
-                                                <p>HITS: Something</p>
-                                                <p>STRIKES: Something</p>
-                                                <p>POWER: Something</p>
-                                          </div>
-                                    </div>
-                                    <div class="button-container">
-                                          <button class="add-fav-btn btn">
-                                                <img src="./images/pokeball_closed.png"
-                                                     alt="pokeball-closed">
-                                                Add To Favorites</button>
-                                    </div>
-                              </div>
-                              <div class="card-container">
-                                    <div class="img-container">
-                                          <img src="./images/picka_imgae_1.jpg"
-                                               alt="pickachu">
-                                    </div>
-                                    <h6 class="name-tag">Pickachu</h6>
-                                    <hr class="card-hr">
-                                    <div class="card-stats-container">
-                                          <div class="inner-stat-container">
-                                                <p>HITS: Something</p>
-                                                <p>STRIKES: Something</p>
-                                                <p>POWER: Something</p>
-                                          </div>
-                                    </div>
-                                    <div class="button-container">
-                                          <button class="add-fav-btn btn">
-                                                <img src="./images/pokeball_closed.png"
-                                                     alt="pokeball-closed">
-                                                Add To Favorites</button>
-                                    </div>
-                              </div>
-                              <div class="card-container">
-                                    <div class="img-container">
-                                          <img src="./images/picka_imgae_1.jpg"
-                                               alt="pickachu">
-                                    </div>
-                                    <h6 class="name-tag">Pickachu</h6>
-                                    <hr class="card-hr">
-                                    <div class="card-stats-container">
-                                          <div class="inner-stat-container">
-                                                <p>HITS: Something</p>
-                                                <p>STRIKES: Something</p>
-                                                <p>POWER: Something</p>
-                                          </div>
-                                    </div>
-                                    <div class="button-container">
-                                          <button class="add-fav-btn btn">
-                                                <img src="./images/pokeball_closed.png"
-                                                     alt="pokeball-closed">
-                                                Add To Favorites</button>
-                                    </div>
-                              </div>
-                              <div class="card-container">
-                                    <div class="img-container">
-                                          <img src="./images/picka_imgae_1.jpg"
-                                               alt="pickachu">
-                                    </div>
-                                    <h6 class="name-tag">Pickachu</h6>
-                                    <hr class="card-hr">
-                                    <div class="card-stats-container">
-                                          <div class="inner-stat-container">
-                                                <p>HITS: Something</p>
-                                                <p>STRIKES: Something</p>
-                                                <p>POWER: Something</p>
-                                          </div>
-                                    </div>
-                                    <div class="button-container">
-                                          <button class="add-fav-btn btn">
-                                                <img src="./images/pokeball_closed.png"
-                                                     alt="pokeball-closed">
-                                                Add To Favorites</button>
-                                    </div>
-                              </div>
+
                         </div>
-                        <div class="fav-image-container">
-                              <div class="fav-img-left">
-                                    <img src="./images/ash_left_img.jpg"
-                                         alt="ash pokemon">
-                              </div>
-                              <div class="fav-logo-img">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Pok%C3%A9mon_FanMade_Logo.png"
-                                         alt="pokemon-logo">
-                              </div>
-                              <div class="fav-img-right">
-                                    <img src="./images/picka_ashSholder.jpg"
-                                         alt="ash-pokemon">
-                              </div>
-                        </div>
+                  </div>
+                  <!-- !!Modal Bottom Image Contaienr -->
+                  <!--<div class="modal-bottom-img-container">
+				<div class="modal-img-left">
+					<img src="./images/ash_left_img.jpg"
+							 alt="pokemon ash">
+				</div>
+				<div class="modal-img-middle"><img
+							 src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Pok%C3%A9mon_FanMade_Logo.png"
+							 alt="pokemon-logo"></div>
+				<div class="modal-img-right">
+					<img src="./images/picka_ashSholder.jpg"
+							 alt=".pokemon-ash">
+				</div>
+			</div>
+		</div>-->
 
-                  </section>
+            </div>
+
+            <script src="./js/index.js"></script>
 
 
-                  < <!--<footer>
-
-                        <a href="https://www.flaticon.com/free-icons/pokeball"
-                           title="pokeball icons">Pokeball icons created by Shahzama Ahmad - Flaticon</a>
-                        </footer>-->
-                        <script src="./js/index.js"></script>
       </body>
 
 </html>

@@ -1,0 +1,98 @@
+@media screen and (max-width:1024px) {
+  .page-block {
+    margin-top: -50px;
+  }
+
+  .modal-header-container {
+    margin-top: 1px;
+
+  }
+
+
+  .sort-container {
+    margin-bottom: -10px;
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .body-content-wrapper {
+    width: 90vw;
+
+  }
+
+  .page-block {
+
+    margin-top: -250px;
+  }
+
+  .navbar-image {
+    margin-bottom: -40px;
+  }
+
+  nav a {
+    font-size: 25px;
+  }
+
+  .card-section {
+    width: 80vw;
+  }
+
+  .page-block {
+    height: 60vh;
+    border: 8px ridge var(--yellow-border);
+    padding: 1.5rem 0.1rem;
+  }
+
+  .modal-header-container {
+    margin-bottom: 15px;
+  }
+
+  .modal-header-container h2,
+  .modal-header-container a {
+    font-size: 30px;
+    font-weight: 350;
+  }
+
+  .sort-container {
+    margin: 2px 0 -10px 0;
+  }
+
+  .sort-count-container {
+    margin-bottom: 10px;
+
+  }
+
+  .sort-count-container h5 {
+    font-size: 15px;
+  }
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+  .body-content-wrapper {
+    width: 90vw;
+    padding: none;
+
+  }
+
+  #fav-section {
+    margin: 10px 0 0 20px;
+  }
+
+}
+
+
+/* TODO: Readjust all full-site modal screens
+
+adjust full-site modal buttons if they dont adjust adjust back when I correct them in the defualt csss
+ */
