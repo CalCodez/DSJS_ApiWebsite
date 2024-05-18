@@ -24,7 +24,6 @@
             <link rel="stylesheet"
                   href="./css/responsive.css">
 
-
       </head>
 
       <body>
@@ -39,23 +38,15 @@
                               <a data-open="favorite">FAVORITES</a>
                         </nav>
                   </div>
-
                   <section class="card-section"
                            id="main-card-section">
-
                   </section>
 
-
-
                   <!-- !!Favorite MODAL -->
-                  <div class="full-site-modal page-block"
+                  <div class="full-site-modal page-block modal"
                        id="favorite"
                        data-animation="zoomInOut"
-                       data-close="#">
-                        <div class="modal-header-container">
-                              <h2>Favorites</h2>
-                              <a href="./index.html">Home</a>
-                        </div>
+                       data-close="page-block">
                         <div class="sort-count-container">
                               <div class="sort-container">
                                     <button class="btn sort-btn"
@@ -66,37 +57,22 @@
                                             data-sortdir="desc">Sort Z-A</button>
                               </div>
                               <h5 class="counter-text"></h5>
+                              <i class="fa-solid fa-x"
+                                 data-close></i>
                         </div>
                         <div class="fav-container-wrapper">
                               <div class="favorites-container modal-body"
                                    id="fav-section"
                                    dataset="fav-section">
 
-
                               </div>
 
                         </div>
                   </div>
-                  <!-- !!Modal Bottom Image Contaienr -->
-                  <!--<div class="modal-bottom-img-container">
-				<div class="modal-img-left">
-					<img src="./images/ash_left_img.jpg"
-							 alt="pokemon ash">
-				</div>
-				<div class="modal-img-middle"><img
-							 src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Pok%C3%A9mon_FanMade_Logo.png"
-							 alt="pokemon-logo"></div>
-				<div class="modal-img-right">
-					<img src="./images/picka_ashSholder.jpg"
-							 alt=".pokemon-ash">
-				</div>
-			</div>
-		</div>-->
 
             </div>
 
             <script src="./js/index.js"></script>
-
 
       </body>
 

@@ -1,98 +1,81 @@
+/* @ 1024px */
 @media screen and (max-width:1024px) {
-  .page-block {
-    margin-top: -50px;
+  .page-block .sort-count-container {
+    align-items: center;
   }
 
-  .modal-header-container {
-    margin-top: 1px;
-
-  }
-
-
-  .sort-container {
-    margin-bottom: -10px;
-
+  .page-block .sort-container {
+    margin-top: 20px;
   }
 
 }
 
-
-
+/* @ 480px */
 @media screen and (max-width: 480px) {
-  .body-content-wrapper {
-    width: 90vw;
-
-  }
-
   .page-block {
-
-    margin-top: -250px;
-  }
-
-  .navbar-image {
-    margin-bottom: -40px;
-  }
-
-  nav a {
-    font-size: 25px;
-  }
-
-  .card-section {
-    width: 80vw;
-  }
-
-  .page-block {
-    height: 60vh;
-    border: 8px ridge var(--yellow-border);
-    padding: 1.5rem 0.1rem;
-  }
-
-  .modal-header-container {
-    margin-bottom: 15px;
-  }
-
-  .modal-header-container h2,
-  .modal-header-container a {
-    font-size: 30px;
-    font-weight: 350;
-  }
-
-  .sort-container {
-    margin: 2px 0 -10px 0;
+    border: 10px inset var(--yellow-border);
+    padding: 1rem;
   }
 
   .sort-count-container {
-    margin-bottom: 10px;
+    flex-direction: column;
+    gap: 0;
+    top: 12%;
+    left: 8%;
+    margin-bottom: -10%;
 
   }
 
-  .sort-count-container h5 {
-    font-size: 15px;
+  .sort-count-container>h5 {
+    margin-top: -2%;
+
   }
 
-
-
-
-
-}
-
-
-@media screen and (max-width: 375px) {
-
-  .body-content-wrapper {
-    width: 90vw;
-    padding: none;
-
+  .sort-count-container>i {
+    position: absolute;
+    top: 5%;
+    left: 92%
   }
 
   #fav-section {
-    margin: 10px 0 0 20px;
+    margin-top: 100px;
+
+  }
+
+  #fav-section .card-container .btn {
+    font-size: 5px;
+
+  }
+
+  #fav-section .card-container:hover {
+    transform: scale(1.2);
+
   }
 
 }
 
+/* @ 412px */
+@media screen and (max-width: 412px) {
+  .sort-count-container {
+    right: 30px;
 
-/* TODO: Readjust all full-site modal screens
+  }
+}
 
-adjust full-site modal buttons if they dont adjust adjust back when I correct them in the defualt csss
- */
+/* @ 375px */
+@media screen and (max-width: 376px) {
+  .navbar-container {
+    margin-bottom: 50px;
+  }
+
+  .navbar-image {
+    height: 20vh;
+    margin-bottom: -20px;
+  }
+
+  .sort-count-container {
+    width: inherit;
+    left: 36px;
+  }
+
+}
