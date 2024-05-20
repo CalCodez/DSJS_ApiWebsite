@@ -90,18 +90,16 @@ const createPokemon = async (pokemon) => {
   // Append elements to the card
   const arrItems = [imgContainer, nameTag, statsContainer, button]
 
-
   return appendCardWithItems(arrItems, card);
-};
+}
 
 
 const displayPokemons = async (pokemonList) => {
   const cardSection = document.querySelector('.card-section');
   cardSection.innerHTML = '';
-
   pokemonList.forEach(async (pokemon) => {
-    await createPokemon(pokemon);
-    cardSection.appendChild(card);
+    const card = await createPokemon(pokemon);
+    cardSection.append(card);
   });
 };
 
@@ -109,12 +107,13 @@ const displayPokemons = async (pokemonList) => {
 document.addEventListener('DOMContentLoaded', () => fetchPokemonData(API_URL));
 
 let favsection = document.getElementById('fav-section');
+let mainCardSection = document.getElementById('main-card-section');
 let favorites = [favsection];
 
 const toggleFavorite = (card) => {
   const favSection = document.getElementById('fav-section');
+  const appendContainer = card.parentElement === favSection ? mainCardSection : favSection;
   card.remove();
-  const appendContainer = card.parentElement === favSection ? document.querySelector('.card-section') : favSection;
   appendContainer.appendChild(card);
 };
 
@@ -165,9 +164,11 @@ const sortData = (direction) => {
 
 const sortButtonAsc = document.getElementById('sortBTN-asc');
 const sortButtonDesc = document.getElementById('sortBTN-desc');
-
-[sortButtonAsc, sortButtonDesc].forEach((btn) => {
-  btn.addEventListener('click', () => sortData(sortButtonAsc.dataset.sortdir));
+sortButtonAsc.addEventListener('click', () => {
+  sortData(sortButtonAsc.dataset.sortdir);
+});
+sortButtonDesc.addEventListener('click', () => {
+  sortData(sortButtonDesc.dataset.sortdir);
 });
 
 
@@ -179,5 +180,4 @@ const totalFav = () => {
   let favTotal = favSection.childElementCount;
   favCounter.textContent = ` Favorites: ${favTotal}`;
 };
-
 totalFav();
