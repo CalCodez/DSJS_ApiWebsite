@@ -28,7 +28,7 @@ const setButton = (card) => {
     }
   });
   buttonContainer.appendChild(addFavBtn);
-  return buttonContainer
+  return buttonContainer;
 };
 
 const createStatElement = (label, value) => {
@@ -36,11 +36,11 @@ const createStatElement = (label, value) => {
   statElement.textContent = `${label}: ${value} `;
   return statElement;
 };
+
 const appendCardWithItems = (arrItems, card) => {
-  arrItems.forEach((item) => card.appendChild(item))
+  arrItems.forEach((item) => card.appendChild(item));
   return card;
 };
-
 
 const createPokemon = async (pokemon) => {
   const response = await fetch(pokemon.url);
@@ -76,12 +76,7 @@ const createPokemon = async (pokemon) => {
     'Ability': pokemonData.abilities[0].ability.name,
     'Attack': pokemonData.stats[1].base_stat,
     'Defense': pokemonData.stats[2].base_stat,
-  }
-
-  console.log(pokemonDataKeys.Ability);
-
-
-
+  };
 
   Object.entries(pokemonDataKeys).forEach(([key, value]) => {
     innerStatContainer.appendChild(createStatElement(key, value));
@@ -93,36 +88,65 @@ const createPokemon = async (pokemon) => {
   const button = setButton(card);
 
   // Append elements to the card
-  const arrItems = [imgContainer, nameTag, statsContainer, button]
+  const arrItems = [imgContainer, nameTag, statsContainer, button];
 
   return appendCardWithItems(arrItems, card);
-}
-
-
-
-
-
+};
 
 const displayPokemons = async (pokemonList) => {
   const cardSection = document.querySelector('.card-section');
   cardSection.innerHTML = '';
-  pokemonList.forEach(async (pokemon) => {
-    const card = await createPokemon(pokemon);
-    cardSection.append(card);
-    abilityDisplay();
-  });
+  const cards = await Promise.all(pokemonList.map(createPokemon));
+  cards.forEach(card => cardSection.append(card));
+  // Use requestAnimationFrame to ensure the DOM updates are complete before running abilityDisplay
+  requestAnimationFrame(abilityDisplay);
 };
 
+const abilityDisplay = () => {
+  let staticCount = '0';
+  let keenEyesCount = '0';
+  let overGrowCount = '0';
+  let shedSkinCount = '0';
+
+  document.querySelectorAll('.card-container').forEach(card => {
+    const abilityElement = card.querySelector('.inner-stat-container p:nth-child(3)');
+    if (abilityElement) {
+      const ability = abilityElement.textContent.split(': ')[1];
+      console.log('Ability found:', ability); // Add logging to trace the ability
+      if (ability.includes('static')) {
+        staticCount++;
+      } else if (ability.includes('keen-eye')) {
+        keenEyesCount++;
+      } else if (ability.includes('overgrow')) {
+        overGrowCount++;
+      } else if (ability.includes('shed-skin')) {
+        shedSkinCount++;
+      }
+    } else {
+      console.warn('Ability element not found for card:', card); // Warn if ability element is not found
+    }
+  });
+
+  const abilityDisplayContainer = document.querySelector('.ability-display-container');
+  if (abilityDisplayContainer) {
+    abilityDisplayContainer.innerHTML = `
+      <h5>Abilities</h5>
+      <p>Static: ${staticCount}</p>
+      <p>Keen-Eye: ${keenEyesCount}</p>
+      <p>Overgrow: ${overGrowCount}</p>
+      <p>Shed-Skin: ${shedSkinCount}</p>
+    `;
+  } else {
+    console.error('Ability display container not found'); // Error if ability display container is not found
+  }
 
 
 
+};
 
 
 // Fetch Pokémon data when the document is ready
 document.addEventListener('DOMContentLoaded', () => fetchPokemonData(API_URL));
-
-
-
 
 let favsection = document.getElementById('fav-section');
 let mainCardSection = document.getElementById('main-card-section');
@@ -197,25 +221,3 @@ const totalFav = () => {
 };
 
 totalFav();
-
-
-
-
-
-
-
-// Function to display total number of favorites
-//create a function that display the total number of .cards with pokemonData.abilities[0].ability.name === 'static' in the .ablity-display-container
-const abilityDisplay = () => {
-  let abilityDisplayContainer = document.querySelector('.ability-display-container');
-  let cards = document.querySelectorAll('.card-container');
-  let abilityCounter = 0;
-  cards.forEach(card => {
-    let ability = pokemonData.abilities[0].ability;
-    if (ability === 'static') {
-      abilityCounter++;
-    }
-  });
-  abilityDisplayContainer.textContent = `Pokemons with Static Ability: ${abilityCounter}`;
-};
-abilityDisplay();

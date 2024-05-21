@@ -1,5 +1,24 @@
 /* @ 1024px */
 @media screen and (max-width:1024px) {
+  .ability-display-container {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+    place-self: center;
+    left: 2px;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--poke-darkBlue-transparent);
+  }
+
+  .ability-display-container p {
+    color: var(--alpha-sapphire);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+  }
+
   .page-block .sort-count-container {
     align-items: center;
   }
@@ -10,8 +29,35 @@
 
 }
 
+/* @ 768px */
+@media screen and (max-width: 768px) {
+  .ability-display-container p {
+    font-size: 18px;
+
+  }
+}
+
 /* @ 480px */
 @media screen and (max-width: 480px) {
+
+  .ability-display-container {
+    width: 85vw;
+    gap: 10px;
+  }
+
+  .ability-display-container h5 {
+    font-size: 12px;
+    margin-left: -13px;
+  }
+
+  .ability-display-container p {
+    font-size: 10px;
+    text-wrap: nowrap;
+    margin-left: -10px;
+    color: var(--poke-red);
+    font-weight: 300;
+  }
+
   .page-block {
     border: 10px inset var(--yellow-border);
     padding: 1rem;
@@ -56,6 +102,24 @@
 
 /* @ 412px */
 @media screen and (max-width: 412px) {
+
+  .ability-display-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ability-display-container h5 {
+    font-size: 20px;
+  }
+
+  .ability-display-container p {
+    font-size: 18px;
+    line-height: 0.8;
+    font-weight: 300;
+  }
+
+
+
   .sort-count-container {
     right: 30px;
 

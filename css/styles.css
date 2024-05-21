@@ -41,21 +41,45 @@ nav a {
 }
 
 
+
+
 .ability-display-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: auto;
-  width: inherit;
-  border: 2px groove red;
+  width: fit-content;
+  border: 5px ridge var(--alpha-sapphire);
   margin-bottom: 10px;
   place-content: center;
-  justify-content: space-around;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  padding: 1rem;
+  font-family: 'Activity Saturday', sans-serif;
+
+
 }
 
+
+.ability-display-container h5 {
+  color: var(--yellow-border);
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+  letter-spacing: 4px
+}
+
+
 .ability-display-container p {
-  color: var(--poke-blue);
-  font-size: 20px;
+  color: var(--poke-red);
+  font-size: 15px;
   font-weight: 900;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 900;
+  text-decoration: underline overline var(--yellow-border);
+  line-height: 2;
 }
 
 /* ~~ Card Setion */

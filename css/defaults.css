@@ -16,7 +16,7 @@
   --poke-silver: #c0c0c0;
 
   /* EXTRA COLORS */
-  --alpah-sapphire: #1768d1;
+  --alpha-sapphire: #1768d1;
   --crystal: #4fd9ff;
   --colloseum: #b6cae4;
 
@@ -103,15 +103,15 @@ li {
   place-self: center;
   display: flex;
   margin-bottom: 1.25rem;
-gap: 1.25rem;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-height: auto;
-margin: -0.625rem 0 1.25rem 0;
-line-height: 0;
-padding-top: 0;
+  gap: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: auto;
+  margin: -0.625rem 0 1.25rem 0;
+  line-height: 0;
+  padding-top: 0;
 
 }
 
@@ -122,7 +122,7 @@ padding-top: 0;
   border: 0.125rem solid white;
   border: 0.125rem solid var(--poke-red);
   box-shadow: 0.0625rem 0.0625rem 0.0625rem 0.0313rem var(--poke-lightBlue);
-  }
+}
 
 
 
@@ -143,9 +143,9 @@ padding-top: 0;
 
 .sort-count-hr {
   border: 0.3125rem groove var(--poke-lightBlue);
-border-radius: 3.125rem;
-width: 99%;
-margin: 0.625rem 0;
-place-self: center;
+  border-radius: 3.125rem;
+  width: 99%;
+  margin: 0.625rem 0;
+  place-self: center;
 
 }
