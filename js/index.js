@@ -78,6 +78,11 @@ const createPokemon = async (pokemon) => {
     'Defense': pokemonData.stats[2].base_stat,
   }
 
+  console.log(pokemonDataKeys.Ability);
+
+
+
+
   Object.entries(pokemonDataKeys).forEach(([key, value]) => {
     innerStatContainer.appendChild(createStatElement(key, value));
   });
@@ -94,17 +99,30 @@ const createPokemon = async (pokemon) => {
 }
 
 
+
+
+
+
 const displayPokemons = async (pokemonList) => {
   const cardSection = document.querySelector('.card-section');
   cardSection.innerHTML = '';
   pokemonList.forEach(async (pokemon) => {
     const card = await createPokemon(pokemon);
     cardSection.append(card);
+    abilityDisplay();
   });
 };
 
+
+
+
+
+
 // Fetch Pokémon data when the document is ready
 document.addEventListener('DOMContentLoaded', () => fetchPokemonData(API_URL));
+
+
+
 
 let favsection = document.getElementById('fav-section');
 let mainCardSection = document.getElementById('main-card-section');
@@ -171,13 +189,33 @@ sortButtonDesc.addEventListener('click', () => {
   sortData(sortButtonDesc.dataset.sortdir);
 });
 
-
-
-// Function to display total number of favorites
 const totalFav = () => {
   let favSection = document.getElementById('fav-section');
   let favCounter = document.querySelector('.counter-text');
   let favTotal = favSection.childElementCount;
   favCounter.textContent = ` Favorites: ${favTotal}`;
 };
+
 totalFav();
+
+
+
+
+
+
+
+// Function to display total number of favorites
+//create a function that display the total number of .cards with pokemonData.abilities[0].ability.name === 'static' in the .ablity-display-container
+const abilityDisplay = () => {
+  let abilityDisplayContainer = document.querySelector('.ability-display-container');
+  let cards = document.querySelectorAll('.card-container');
+  let abilityCounter = 0;
+  cards.forEach(card => {
+    let ability = pokemonData.abilities[0].ability;
+    if (ability === 'static') {
+      abilityCounter++;
+    }
+  });
+  abilityDisplayContainer.textContent = `Pokemons with Static Ability: ${abilityCounter}`;
+};
+abilityDisplay();

@@ -40,6 +40,24 @@ nav a {
 
 }
 
+
+.ability-display-container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: inherit;
+  border: 2px groove red;
+  margin-bottom: 10px;
+  place-content: center;
+  justify-content: space-around;
+}
+
+.ability-display-container p {
+  color: var(--poke-blue);
+  font-size: 20px;
+  font-weight: 900;
+}
+
 /* ~~ Card Setion */
 .card-section {
   display: flex;
@@ -192,7 +210,7 @@ h4 {
   font-family: 'Fight Side', sans-serif;
   color: var(--pickachu);
   font-size: 1.875rem;
- letter-spacing: 0.1875rem;
+  letter-spacing: 0.1875rem;
   line-height: 1;
   position: absolute;
   left: 90%;
@@ -204,8 +222,8 @@ h4 {
   display: flex;
   font-family: 'Pokemon Solid', sans-serif;
   font-size: 1.25rem;
- color: var(--pickachu);
- letter-spacing: 0.2813rem;
+  color: var(--pickachu);
+  letter-spacing: 0.2813rem;
 }
 
 .sort-count-container i {
@@ -235,14 +253,14 @@ h4 {
   min-height: 20vh;
   width: 90vw;
   gap: 1.25rem;
- overflow: hidden;
- overflow-y: scroll;
- border-top: 0.625rem groove var(--poke-red);
- border-left: 0.625rem groove var(--poke-blue);
- border-right: 0.625rem groove var(--poke-blue);
- border-bottom: 0.625rem groove var(--poke-red);
- padding: 1.5625rem 0;
- margin-top: 0.625rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-top: 0.625rem groove var(--poke-red);
+  border-left: 0.625rem groove var(--poke-blue);
+  border-right: 0.625rem groove var(--poke-blue);
+  border-bottom: 0.625rem groove var(--poke-red);
+  padding: 1.5625rem 0;
+  margin-top: 0.625rem;
 }
 
 
@@ -280,7 +298,7 @@ footer {
 
 .modal-img-left {
   width: 5rem;
- height: 5rem;
+  height: 5rem;
   object-fit: cover;
   border-radius: 50%;
 
