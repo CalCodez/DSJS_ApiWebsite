@@ -1,145 +1,130 @@
 /* @ 1024px */
-@media screen and (max-width:1024px) {
-  .ability-display-container {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 30px;
-    place-self: center;
-    left: 2px;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: var(--poke-darkBlue-transparent);
-  }
+@media screen and (max-width: 1366px) {
+	.ability-display-container {
+		position: relative;
+		flex-direction: row;
+		justify-content: space-evenly;
+		gap: 30px;
+		place-self: center;
+		left: 2px;
+		align-items: center;
+		margin-bottom: 20px;
+		background-color: var(--poke-darkBlue-transparent);
+	}
 
-  .ability-display-container p {
-    color: var(--alpha-sapphire);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+	.ability-display-container p {
+		color: var(--alpha-sapphire);
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 20px;
+	}
 
-  }
+	.page-block .sort-count-container {
+		align-items: center;
+	}
 
-  .page-block .sort-count-container {
-    align-items: center;
-  }
-
-  .page-block .sort-container {
-    margin-top: 20px;
-  }
-
+	.page-block .sort-container {
+		margin-top: 20px;
+	}
 }
 
 /* @ 768px */
 @media screen and (max-width: 768px) {
-  .ability-display-container p {
-    font-size: 18px;
-
-  }
+	.ability-display-container p {
+		font-size: 18px;
+	}
 }
 
 /* @ 480px */
 @media screen and (max-width: 480px) {
+	.ability-display-container {
+		width: 85vw;
+		gap: 10px;
+	}
 
-  .ability-display-container {
-    width: 85vw;
-    gap: 10px;
-  }
+	.ability-display-container h5 {
+		font-size: 12px;
+		margin-left: -13px;
+	}
 
-  .ability-display-container h5 {
-    font-size: 12px;
-    margin-left: -13px;
-  }
+	.ability-display-container p {
+		font-size: 10px;
+		text-wrap: nowrap;
+		margin-left: -10px;
+		color: var(--poke-red);
+		font-weight: 300;
+	}
 
-  .ability-display-container p {
-    font-size: 10px;
-    text-wrap: nowrap;
-    margin-left: -10px;
-    color: var(--poke-red);
-    font-weight: 300;
-  }
+	.page-block {
+		border: 10px inset var(--yellow-border);
+		padding: 1rem;
+	}
 
-  .page-block {
-    border: 10px inset var(--yellow-border);
-    padding: 1rem;
-  }
+	.sort-count-container {
+		flex-direction: column;
+		gap: 0;
+		top: 12%;
+		left: 8%;
+		margin-bottom: -10%;
+	}
 
-  .sort-count-container {
-    flex-direction: column;
-    gap: 0;
-    top: 12%;
-    left: 8%;
-    margin-bottom: -10%;
+	.sort-count-container > h5 {
+		margin-top: -2%;
+	}
 
-  }
+	.sort-count-container > i {
+		position: absolute;
+		top: 5%;
+		left: 92%;
+	}
 
-  .sort-count-container>h5 {
-    margin-top: -2%;
+	#fav-section {
+		margin-top: 100px;
+	}
 
-  }
+	#fav-section .card-container .btn {
+		font-size: 5px;
+	}
 
-  .sort-count-container>i {
-    position: absolute;
-    top: 5%;
-    left: 92%
-  }
-
-  #fav-section {
-    margin-top: 100px;
-
-  }
-
-  #fav-section .card-container .btn {
-    font-size: 5px;
-
-  }
-
-  #fav-section .card-container:hover {
-    transform: scale(1.2);
-
-  }
-
+	#fav-section .card-container:hover {
+		transform: scale(1.2);
+	}
 }
 
 /* @ 412px */
 @media screen and (max-width: 412px) {
+	.ability-display-container {
+		flex-direction: column;
+		gap: 10px;
+	}
 
-  .ability-display-container {
-    flex-direction: column;
-    gap: 10px;
-  }
+	.ability-display-container h5 {
+		font-size: 20px;
+	}
 
-  .ability-display-container h5 {
-    font-size: 20px;
-  }
+	.ability-display-container p {
+		font-size: 18px;
+		line-height: 0.8;
+		font-weight: 300;
+	}
 
-  .ability-display-container p {
-    font-size: 18px;
-    line-height: 0.8;
-    font-weight: 300;
-  }
-
-
-
-  .sort-count-container {
-    right: 30px;
-
-  }
+	.sort-count-container {
+		right: 30px;
+	}
 }
 
 /* @ 375px */
 @media screen and (max-width: 376px) {
-  .navbar-container {
-    margin-bottom: 50px;
-  }
+	.navbar-container {
+		margin-bottom: 50px;
+	}
 
-  .navbar-image {
-    height: 20vh;
-    margin-bottom: -20px;
-  }
+	.navbar-image {
+		height: 20vh;
+		margin-bottom: -20px;
+	}
 
-  .sort-count-container {
-    width: inherit;
-    left: 36px;
-  }
-
+	.sort-count-container {
+		width: inherit;
+		left: 36px;
+	}
 }
